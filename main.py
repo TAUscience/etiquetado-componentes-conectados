@@ -1,7 +1,23 @@
+import matplotlib.pyplot as plt
+
 from UnionFind import UnionFind as UF
+from umbralizacion_otsu import umbralizar_otsu_var_clases as otsu
+from imagenes import obtener_nombres_imagenes_aleatorias as nombres_img
+from imagenes import invertir as inv_img
 
+cant_imgs=2
+nombres_imagenes=nombres_img(cant_imgs)
+print(nombres_imagenes)
 
+for img in range(cant_imgs):
+    #Formar la ruta de la imagen
+    ruta_imagen="img/"+nombres_imagenes[img]
+    
+    #Apliar otsu a la imagen
+    img_otsu=otsu(ruta_imagen)
 
+    #Invertir imagen
+    imagen=inv_img(img_otsu)
 
 # Ejemplo de uso
 n = 6  # Número de elementos

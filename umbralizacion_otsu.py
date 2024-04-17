@@ -67,14 +67,14 @@ def umbralizar_otsu_var_clases(ruta_imagen):
     varianzaC2/=256-k_optimo
         
     #Imprimir el histrograma
-    plot_histograma_umbral(hist_img,k_optimo,P1,P2,m1,m2,sigma_cuadrada[k_optimo],varianzaC1,varianzaC2)
+    #plot_histograma_umbral(hist_img,k_optimo,P1,P2,m1,m2,sigma_cuadrada[k_optimo],varianzaC1,varianzaC2)
 
     #Binarizar imagen
     img_umbralizada=binarizar(ruta_imagen,0,255,99)
-    plt.imshow(img_umbralizada)
-    plt.show()
+    """plt.imshow(img_umbralizada)
+    plt.show()"""
     
-    return k_optimo,sigma_cuadrada,mejores_cinco
+    return img_umbralizada
 
 #UMBRALIZACIÓN OTSU MAXIMIZANDO LA MEDIA ADIMENSIONAL NORMALIZADA
 def umbralizar_otsu_med_adim_norm(ruta_imagen):
@@ -113,7 +113,7 @@ def umbralizar_otsu_med_adim_norm(ruta_imagen):
     return k_optimo,eta,mejores_cinco
 
 
-"""---------------- INICIO DEL PROCEDIMIENTO PARA UNA IMAGEN ---------------"""
+"""---------------- INICIO DEL PROCEDIMIENTO PARA UNA IMAGEN ---------------
 
 #Lectura de imagen
 ruta_imagen='img4.jpg' #<-- Cambiar aquí la ruta de la imagen
@@ -132,3 +132,5 @@ print("Mejores valores de k =",top5)
 k_asterisco,medida_adimensional_norm,top5_eta=umbralizar_otsu_med_adim_norm(ruta_imagen)
 #TOP 5
 print("Mejores valores (COMPROBANDO CON MEDIDA ADIMENSIONAL NORMALIZADA) de k =",top5_eta)
+
+"""
