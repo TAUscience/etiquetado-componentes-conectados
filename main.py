@@ -18,6 +18,8 @@ for img in range(cant_imgs):
 
     #Invertir imagen
     imagen=inv_img(img_otsu)
+    plt.imshow(imagen)
+    plt.show()
 
 # Ejemplo de uso
 n = 6  # Número de elementos
