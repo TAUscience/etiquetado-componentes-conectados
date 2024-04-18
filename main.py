@@ -5,7 +5,7 @@ from umbralizacion_otsu import umbralizar_otsu_var_clases as otsu
 from imagenes import obtener_nombres_imagenes_aleatorias as nombres_img
 from imagenes import invertir as inv_img
 
-cant_imgs=2
+cant_imgs=1
 nombres_imagenes=nombres_img(cant_imgs)
 print(nombres_imagenes)
 
