@@ -111,26 +111,3 @@ def umbralizar_otsu_med_adim_norm(ruta_imagen):
     mejores_cinco = np.argsort(eta)[-n:][::-1]
 
     return k_optimo,eta,mejores_cinco
-
-
-"""---------------- INICIO DEL PROCEDIMIENTO PARA UNA IMAGEN ---------------
-
-#Lectura de imagen
-ruta_imagen='img4.jpg' #<-- Cambiar aquí la ruta de la imagen
-
-img=Image.open(ruta_imagen,'r')
-mimg=np.array(img)
-plt.imshow(mimg,cmap='gray')
-plt.show()
-
-#Método de OTSU maximizando la VARIANZA ENTRE CLASES
-k_asterisco,varianza_clases,top5=umbralizar_otsu_var_clases(ruta_imagen)
-#TOP 5
-print("Mejores valores de k =",top5)
-
-#Comparar los resultados obtenidos con el cálculo de la MEDIDA ADIMENSIONAL NORMALIZADA
-k_asterisco,medida_adimensional_norm,top5_eta=umbralizar_otsu_med_adim_norm(ruta_imagen)
-#TOP 5
-print("Mejores valores (COMPROBANDO CON MEDIDA ADIMENSIONAL NORMALIZADA) de k =",top5_eta)
-
-"""
