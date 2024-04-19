@@ -48,7 +48,7 @@ def imprimir_resultados(original,grises,binaria,pasada1,pasada2):
 
 
 #Recuperación de imágenes
-cant_imgs=3
+cant_imgs=1
 nombres_imagenes=nombres_img(cant_imgs)
 
 for img in range(cant_imgs):
@@ -64,9 +64,13 @@ for img in range(cant_imgs):
     #Procedimiento para conectividad 8
     primera_pasada_conecta8 = primer_etiquetado_conecta8(imagen[:,:,0])
     segunda_pasada_conecta8 = segundo_etiquetado_conecta8(imagen[:,:,0])
-
     #Ploteo de resultados conectividad 8
     imprimir_resultados(img_original,img_grises,imagen,primera_pasada_conecta8,segunda_pasada_conecta8)
+
+    #Procedimiento para conectividad 4
+    primera_pasada_conecta4 = primer_etiquetado_conecta4(imagen[:,:,0])
+    segunda_pasada_conecta4 = segundo_etiquetado_conecta4(imagen[:,:,0])
+    imprimir_resultados(img_original,img_grises,imagen,primera_pasada_conecta4,segunda_pasada_conecta4)
 
 
 '''
