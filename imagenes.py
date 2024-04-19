@@ -16,14 +16,3 @@ def invertir(img):
     imagen_invertida[img == 255] = 0
     imagen_invertida[img == 0] = 255
     return imagen_invertida
-
-
-def obtener_imagenes(n,nombre_carpeta):
-    nombre_imagenes=obtener_nombres_imagenes_aleatorias(n)
-    imagenes_prepro=[]
-
-    for nombre in nombre_imagenes:
-        ruta_img=nombre_carpeta+"/"+nombre
-        imagenes_prepro.append(canny.aplicar_canny(ruta_img))
-    
-    return imagenes_prepro
