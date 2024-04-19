@@ -35,10 +35,10 @@ def conecta_8(seccion,y,x,etiqueta_global):
         etiqueta_minima = min(x for x in elementos if x != 0)
         etiqueta_actual = etiqueta_minima
 
-        if(etiquetas_equivalentes):
+        """if(etiquetas_equivalentes):
             print(f"Componente: {etiqueta_actual}")
             print('Componentes Hijos:')
-            print(etiquetas_equivalentes)
+            print(etiquetas_equivalentes)"""
 
     return etiqueta_actual, etiqueta_global, etiquetas_equivalentes
 
@@ -58,10 +58,10 @@ def conecta_4(seccion,y,x,etiqueta_global):
         etiqueta_minima = min(x for x in elementos if x != 0)
         etiqueta_actual = etiqueta_minima
 
-        if(etiquetas_equivalentes):
+        """if(etiquetas_equivalentes):
             print(f"Componente: {etiqueta_actual}")
             print('Componentes Hijos:')
-            print(etiquetas_equivalentes)
+            print(etiquetas_equivalentes)"""
 
     return etiqueta_actual, etiqueta_global, etiquetas_equivalentes
 
@@ -246,6 +246,7 @@ matriz = np.array([[1, 0, 0, 0, 0, 1, 0],
                    [0, 0, 0, 0, 0, 0, 0],
                    [1, 1, 1, 0, 1, 0, 1]])
 
+                   Hijo
 
 imagen_etiquetada = EtiquetadoComponentes(matriz)
 
