@@ -15,7 +15,7 @@ def histograma(ruta_img ,canal="todos",cant="no"):
             for an in range(ancho_img):
                 frecuencias[img[al][an]] += 1
         if cant=="si":
-            return frecuencias, alto_img*ancho_img
+            return frecuencias, alto_img*ancho_img, img_grises
         else:
             return frecuencias
         
@@ -33,6 +33,7 @@ def histograma(ruta_img ,canal="todos",cant="no"):
             for al in range(alto_img):
                 for an in range(ancho_img):
                     img_grises[al][an] = (img[al][an][0] * 0.21) + (img[al][an][1] * 0.72) + img[al][an][2] * 0.07
+            img_original=img
             img=img_grises
         else:
             ch = 3
@@ -54,7 +55,7 @@ def histograma(ruta_img ,canal="todos",cant="no"):
                 return hrojo,hverde,hazul
         else:
             if cant=="si":
-                return frecuencias, alto_img*ancho_img
+                return frecuencias, alto_img*ancho_img, img_grises, img_original
             else:
                 return frecuencias
 

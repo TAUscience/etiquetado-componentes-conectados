@@ -26,3 +26,5 @@ class UnionFind:
             # Si ambos tienen la misma altura, elegimos uno para ser el padre y aumentamos su altura
             self.parent[root_y] = root_x
             self.rank[root_x] += 1
+
+        print(f"Uniendo {x} con {y} en el grupo {self.find(x)}")
